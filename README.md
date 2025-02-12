@@ -1,4 +1,4 @@
-# BancodeDados
+# BancoDeDados
 Este repositório contém scripts, modelos e documentos relacionados à criação, manutenção e administração de bancos de dados. Ele inclui:
 
   Estruturas de tabelas (DDL).
