@@ -1,0 +1,20 @@
+services:
+  mysql_db:
+    image: mysql:latest
+    container_name: mysql_container
+    environment:
+      MYSQL_ROOT_PASSWORD: senha_root
+      MYSQL_DATABASE: meu_banco
+      MYSQL_USER: usuario
+      MYSQL_PASSWORD: senha
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - /workspaces/BancodeDados/dados/DadosPCM/DadosPcm.csv:/var/lib/mysql-files/DadosPcm.csv  # CSV no container
+
+volumes:
+  mysql_data:
+
+environment:
+  MYSQL_LOCAL_INFILE: "1"  # Habilita LOAD DATA LOCAL INFILE
