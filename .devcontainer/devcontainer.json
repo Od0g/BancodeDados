@@ -1,0 +1,7 @@
+{
+  "name": "BANCODEDADOS",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "app",
+  "forwardPorts": [5432],
+  "postStartCommand": "echo 'Banco de dados pronto! Use: psql -h localhost -U pratica -d pratica_db'"
+}
