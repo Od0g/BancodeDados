@@ -1,7 +1,16 @@
 {
   "name": "BANCODEDADOS",
-  "dockerComposeFile": "docker-compose.yml",
-  "service": "app",
-  "forwardPorts": [5432],
-  "postStartCommand": "echo 'Banco de dados pronto! Use: psql -h localhost -U pratica -d pratica_db'"
+  "image": "mcr.microsoft.com/devcontainers/python:3.10",
+  "features": {
+    "postgresql": "latest"
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-azuretools.vscode-docker"
+      ]
+    }
+  }
 }
+
